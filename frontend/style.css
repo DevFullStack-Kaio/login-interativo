@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #050505;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    transition: background 0.8s ease;
+}
+
+body.light {
+    background:
+        radial-gradient(
+            circle at 35% 45%,
+            rgba(255, 220, 120, 0.25),
+            #050505 55%
+        );
+}
+
+.login-container {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 60px;
+
+    font-size: 2rem;
+
+    font-style: italic;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.lamp-area {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* =========================
+   ABAJUR
+========================= */
+
+.lamp {
+    position: relative;
+
+    width: 180px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Cúpula */
+
+.lamp-shade {
+    width: 150px;
+    height: 75px;
+
+    background: #333;
+
+    border-radius: 80px 80px 15px 15px;
+
+    transition:
+        background 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* Haste */
+
+.lamp-neck {
+    width: 12px;
+    height: 120px;
+
+    background: #777;
+
+    transition: background 0.5s ease;
+}
+
+
+/* Base */
+
+.lamp-base {
+    width: 75px;
+    height: 15px;
+
+    background: #777;
+
+    border-radius: 10px;
+}
+
+
+/* Cordinha */
+
+.lamp-switch {
+    position: absolute;
+
+    right: 5px;
+    top: 120px;
+
+    width: 25px;
+    height: 25px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #aaa;
+
+    color: #222;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.3s ease;
+}
+
+.lamp-switch:hover {
+    transform: scale(1.15);
+}
+
+
+/* =========================
+   LÂMPADA ACESA
+========================= */
+
+body.light .lamp-shade {
+
+    background: #fff4b0;
+
+    box-shadow:
+        0 0 20px #fff4b0,
+        0 0 50px rgba(255, 220, 100, 0.8),
+        0 0 100px rgba(255, 200, 50, 0.5);
+}
+
+body.light .lamp-neck,
+body.light .lamp-base {
+
+    background: #ddd;
+}
+
+body.light .lamp-switch {
+
+    background: #fff;
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.8);
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.login-form {
+
+    width: 260px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background: rgba(60, 50, 25, 0.25);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.5);
+
+    opacity: 0.2;
+
+    transform: translateY(10px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        background 0.6s ease;
+}
+
+body.light .login-form {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+
+    background: rgba(90, 70, 30, 0.75);
+
+    box-shadow:
+        0 0 30px rgba(255, 210, 100, 0.25);
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+
+    font-size: 1.2rem;
+}
+
+.login-form label {
+
+    display: block;
+
+    text-align: left;
+
+    margin-top: 12px;
+
+    margin-bottom: 5px;
+
+    font-size: 0.8rem;
+}
+
+.login-form input {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    background: rgba(255,255,255,0.15);
+
+    color: white;
+}
+
+.login-form input::placeholder {
+    color: #ccc;
+}
+
+
+/* Botão */
+
+.login-button {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #f5d34a;
+
+    color: #222;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.login-button:hover {
+
+    transform: scale(1.03);
+}
+
+
+/* Mensagem de erro */
+
+#errorMsg {
+
+    margin-top: 12px;
+
+    font-size: 0.8rem;
+
+    color: #ff7777;
+}
