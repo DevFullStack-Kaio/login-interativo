@@ -27,6 +27,3 @@ build/
 # Sistema Operacional
 .DS_Store
 Thumbs.db
-
-# Arquivo .env*
-.env
