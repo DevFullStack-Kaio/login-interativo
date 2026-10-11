@@ -132,6 +132,7 @@ PORT=3000
 MONGODB_URI=sua_string_de_conexao
 
 📸 Preview
+
 preview.png
 
 ./frontend/images/preview.png
@@ -145,6 +146,7 @@ Dark Mode
 Deploy em produção
 
 🏗️ Arquitetura
+```
 Frontend (HTML/CSS/JS)
           │
           ▼
@@ -152,6 +154,7 @@ Node.js + Express
           │
           ▼
 MongoDB Atlas
+```
 
 🔒 Segurança
 Uso de variáveis de ambiente (.env)
