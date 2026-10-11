@@ -1,7 +1,7 @@
 🔐 Login Interativo
 Sistema de autenticação desenvolvido com Node.js, Express e MongoDB Atlas.
 
-[GIF funcionando]
+[GIF de demonstração serpa adicionado em breve]
 
 📑 Índice
 #sobre-o-projeto
