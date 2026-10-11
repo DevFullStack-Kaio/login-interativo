@@ -1,7 +1,7 @@
 🔐 Login Interativo
 Sistema de autenticação desenvolvido com Node.js, Express e MongoDB Atlas.
 
-[GIF de demonstração serpa adicionado em breve]
+[GIF de demonstração será adicionado em breve]
 
 📑 Índice
 #sobre-o-projeto
@@ -67,6 +67,7 @@ Ferramentas
 - VS Code
 
 📂 Estrutura do Projeto
+```
 login-interativo/
 │
 ├── backend/
@@ -87,6 +88,7 @@ login-interativo/
 ├── .gitignore
 ├── package.json
 └── README.md
+```
 
 Descrição
 
