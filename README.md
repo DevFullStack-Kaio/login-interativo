@@ -1,177 +1,223 @@
-🔐 Login Interativo
-Sistema de autenticação desenvolvido com Node.js, Express e MongoDB Atlas.
+# 💡 Login Lamp — Login Interativo
 
-[GIF de demonstração será adicionado em breve]
+Aplicação web Full Stack com uma interface de login interativa inspirada em um abajur. Ao acionar a cordinha, a lâmpada muda de estado e o formulário de login é revelado.
 
-📑 Índice
-#sobre-o-projeto
-#funcionalidades
-#tecnologias-utilizadas
-#estrutura-do-projeto
-[instalação
-[Melhorias Futuras](#melhorias-futuras
+O projeto foi desenvolvido para praticar HTML, CSS, JavaScript, Node.js, Express e integração com MongoDB Atlas.
 
-📸 Demonstração
-./frontend/assets/images/login.png
+## 📑 Índice
 
-🖼️ Telas
-Tela de Login
-./frontend/images/login.png
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Demonstração](#-demonstração)
+- [Objetivos](#-objetivos)
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Instalação](#-instalação)
+- [Configuração](#-configuração)
+- [Arquitetura](#-arquitetura)
+- [Segurança](#-segurança)
+- [Melhorias Futuras](#-melhorias-futuras)
+- [Autor](#-autor)
+- [Licença](#-licença)
 
-Tela de Cadastro
-./frontend/images/cadastro.png
+## 📖 Sobre o Projeto
 
-Status
-Node.js
-MongoDBhttps://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+O Login Lamp é uma aplicação web criada para explorar a interação entre elementos visuais e formulários de autenticação.
 
-📖 Sobre o Projeto
-O Login Interativo é uma aplicação web Full Stack desenvolvida para praticar conceitos modernos de autenticação de usuários, integração entre Front-end e Back-end e persistência de dados com MongoDB Atlas.
+A interface utiliza uma lâmpada como elemento central. Ao clicar na cordinha, a iluminação do ambiente muda e o formulário de login torna-se visível.
 
-A aplicação oferece uma interface dinâmica e responsiva, permitindo que usuários realizem cadastro e login de forma simples e intuitiva, com validações e feedback visual em tempo real.
+O projeto também contém um backend desenvolvido com Node.js e Express, com rotas de cadastro e login e integração com MongoDB por meio do Mongoose.
 
-🎯 Objetivos
-Desenvolver um sistema de autenticação completo.
-Aplicar conceitos de desenvolvimento Full Stack.
-Integrar uma aplicação Node.js com MongoDB Atlas.
-Implementar boas práticas de organização de código.
-Criar uma interface moderna e responsiva.
+## 📸 Demonstração
 
-🚀 Funcionalidades
+### 🌑 Lâmpada apagada
 
-✅ Cadastro de usuários
-✅ Login de usuários
-✅ Validação de formulários
-✅ Feedback visual de erros e sucessos
-✅ Interface Responsiva
-✅ Persistência de dados no MongoDB Atlas
-✅ Integração Front-end e Back-end
-✅ Gerenciamento de variáveis de ambiente
+![Login Lamp com a lâmpada apagada](frontend/assets/images/apagada.png)
 
-🛠️ Tecnologias Utilizadas
--Front-end
+### 💡 Lâmpada acesa
+
+![Login Lamp com a lâmpada acesa](frontend/assets/images/acessa.png)
+
+### 🎬 Demonstração animada
+
+![GIF de demonstração do Login Lamp](frontend/assets/images/login-demo.gif)
+
+## 🎯 Objetivos
+
+- Praticar desenvolvimento Full Stack.
+- Criar uma interface interativa com HTML, CSS e JavaScript.
+- Desenvolver rotas utilizando Node.js e Express.
+- Aprender a integrar aplicações com MongoDB Atlas.
+- Utilizar variáveis de ambiente para configurações sensíveis.
+- Aplicar boas práticas de organização e documentação de código.
+
+## 🚀 Funcionalidades
+
+- Interface interativa com lâmpada animada.
+- Efeito de iluminação ao acionar a cordinha.
+- Exibição e ocultação visual do formulário.
+- Formulário de login com campos de e-mail e senha.
+- Rota de cadastro de usuários no backend.
+- Hash de senhas utilizando bcrypt no cadastro.
+- Verificação de senha com bcrypt na rota de login.
+- Integração planejada entre frontend, backend e banco de dados.
+
+**Observação:** a integração do formulário do frontend com as rotas do backend e a conexão com o MongoDB devem ser testadas antes de considerar o fluxo completo de autenticação concluído.
+
+## 🛠️ Tecnologias Utilizadas
+
+### Frontend
 - HTML5
 - CSS3
 - JavaScript
 
-Back-end
+### Backend
 - Node.js
 - Express.js
+- Mongoose
+- bcrypt
 
-Banco de Dados
+### Banco de dados
 - MongoDB Atlas
 
-Ferramentas
+### Ferramentas
+- Visual Studio Code
 - Git
 - GitHub
-- VS Code
 
-📂 Estrutura do Projeto
-```
+## 📂 Estrutura do Projeto
+
+```text
 login-interativo/
-│
 ├── backend/
 │   └── server.js
-│
 ├── frontend/
 │   ├── assets/
-│   │   ├── icons/
-│   │   ├── images/
-│   │   └── login_demo.gif
-│   │
+│   │   └── images/
+│   │       ├── acessa.png
+│   │       ├── apagada.png
+│   │       └── login-demo.gif
 │   ├── index.html
 │   ├── script.js
 │   └── style.css
-│
 ├── .env
 ├── .env.example
 ├── .gitignore
 ├── package.json
+├── package-lock.json
 └── README.md
 ```
 
-Descrição
+> O arquivo `.env` é utilizado localmente e não deve ser enviado ao repositório público. O `.gitignore` deve impedir seu versionamento.
 
-Pasta/Arquivo	Função
-backend	Servidor Node.js
-server.js	Inicialização da API
-frontend	Interface da aplicação
-assets	Recursos visuais
-icons	Ícones utilizados
-images	Imagens e GIFs
-index.html	Estrutura principal
-style.css	Estilos da aplicação
-script.js	Lógica do Front-end
-.env	Variáveis de ambiente
-package.json	Dependências e scripts
+## ⚙️ Instalação
 
-⚙️ Instalação
 Clone o repositório:
 
+```bash
 git clone https://github.com/DevFullStack-Kaio/login-interativo.git
-Acesse a pasta do projeto:
+```
 
+Acesse a pasta:
+
+```bash
 cd login-interativo
+```
+
 Instale as dependências:
 
-Iniciar Aplicação
+```bash
 npm install
+```
 
-Iniciar o servidor
-npm start
+## 🔧 Configuração
 
-🔧 Configuração
-Crie um arquivo .env baseado no arquivo .env.example:
+Crie um arquivo `.env` com base no `.env.example`.
 
-cp .env.example .env
-Preencha as variáveis com suas credenciais do MongoDB Atlas.
+No Windows PowerShell, você pode copiar o arquivo de exemplo com:
 
-Exemplo:
+```powershell
+Copy-Item .env.example .env
+```
 
+Configure as variáveis de ambiente de acordo com seu ambiente:
+
+```env
 PORT=3000
 MONGODB_URI=sua_string_de_conexao
-
-📸 Preview
-
-preview.png
-
-./frontend/images/preview.png
-
-🔮 Melhorias Futuras
-Recuperação de senha
-Criptografia com bcrypt
-Autenticação JWT
-Dashboard do usuário
-Dark Mode
-Deploy em produção
-
-🏗️ Arquitetura
 ```
-Frontend (HTML/CSS/JS)
-          │
-          ▼
+
+Substitua `sua_string_de_conexao` pela URI válida do MongoDB Atlas. Nunca publique senhas ou credenciais reais.
+
+## ▶️ Executando a aplicação
+
+Se o `package.json` possuir o script `start`, execute:
+
+```bash
+npm start
+```
+
+Caso não possua, inicie o servidor diretamente:
+
+```bash
+node backend/server.js
+```
+
+Acesse no navegador:
+
+```text
+http://localhost:3000
+```
+
+O funcionamento do backend depende da configuração correta do MongoDB Atlas e das variáveis de ambiente.
+
+## 🏗️ Arquitetura
+
+```text
+Frontend
+HTML + CSS + JavaScript
+          |
+          v
+Backend
 Node.js + Express
-          │
-          ▼
+          |
+          v
+Mongoose
+          |
+          v
 MongoDB Atlas
 ```
 
-🔒 Segurança
-Uso de variáveis de ambiente (.env)
-Separação Front-end e Back-end
-Validação dos dados enviados pelo usuário
-Comunicação com MongoDB Atlas
+## 🔒 Segurança
 
-👨‍💻 Autor
-Vanderlei Silva
+- Utilização de variáveis de ambiente.
+- Senhas cadastradas armazenadas com hash via bcrypt.
+- Verificação de senhas por comparação com o hash armazenado.
+- Separação entre frontend e backend.
 
-📌 Desenvolvedor Full Stack em formação
+O projeto é educacional e precisa de validações adicionais, tratamento de erros, proteção contra tentativas repetidas e uma estratégia de sessão ou token antes de ser utilizado em produção.
 
-🌐 Portfólio: https://devfullstack-kaio.github.io/portfolio_atualizado/
+## 🔮 Melhorias Futuras
 
-🐙 GitHub: https://github.com/DevFullStack-Kaio
+- Concluir e testar a integração entre frontend e backend.
+- Implementar autenticação persistente com sessões ou JWT.
+- Adicionar recuperação de senha.
+- Criar uma área autenticada para usuários.
+- Melhorar as validações e o tratamento de erros.
+- Publicar o frontend e o backend em serviços de hospedagem apropriados.
+- Aprimorar a acessibilidade e a responsividade.
 
-📄 Licença
-Este projeto está sob a licença MIT.
+## 👨‍💻 Autor
 
-⭐ Se este projeto ajudou você ou serviu de inspiração, deixe uma estrela no repositório.
+**Vanderlei Silva**
+
+Desenvolvedor Full Stack em formação.
+
+- 🌐 [Portfólio](https://devfullstack-kaio.github.io/portfolio_atualizado/)
+- 🐙 [GitHub](https://github.com/DevFullStack-Kaio)
+
+## 📄 Licença
+
+Este projeto está disponibilizado sob a licença MIT, conforme o arquivo de licença do repositório.
+
+⭐ Se este projeto despertou seu interesse, considere deixar uma estrela no repositório.

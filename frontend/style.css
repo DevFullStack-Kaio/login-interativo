@@ -78,16 +78,12 @@ h1 {
 /* Cúpula */
 
 .lamp-shade {
-    width: 150px;
-    height: 75px;
+    width: 170px;
+    height: 90px;
 
     background: #333;
 
-    border-radius: 80px 80px 15px 15px;
-
-    transition:
-        background 0.5s ease,
-        box-shadow 0.5s ease;
+    border-radius: 90px 90px 20px 20px;
 }
 
 
@@ -115,30 +111,88 @@ h1 {
 }
 
 
-/* Cordinha */
-
+/* =========================
+   CORDINHA DO ABAJUR
+========================= */
 .lamp-switch {
     position: absolute;
-
-    right: 5px;
-    top: 120px;
-
-    width: 25px;
-    height: 25px;
-
+    top: 70px; /* antes era 55px */
+    left: calc(50% + 15%);
+    width: 20px;
+    height: 90px;
     border: none;
-
-    border-radius: 50%;
-
-    background: #aaa;
-
-    color: #222;
-
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     cursor: pointer;
+    z-index: 10;
+}
 
-    transition:
-        transform 0.2s ease,
-        background 0.3s ease;
+/* fio da cordinha */
+.cord {
+    width: 2px;
+    height: 65px;
+    background: #d8d8d8;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(255,255,255,.4);
+
+    position: relative;
+    top: 20px; /* desce a corda */
+}
+
+/* puxador pull*/
+.pull {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 30% 30%,
+        #ffe79a,
+        #ce9f20
+    );
+    border: 2px solid #9f7612;
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+
+    position: relative;
+    top: 20px; /* desce junto com a corda */
+}
+
+/* balanço ao passar mouse */
+.lamp-switch:hover {
+    animation: swing 0.7s ease-in-out;
+}
+
+/* efeito de puxar */
+.lamp-switch:active {
+    transform: translateY(8px);
+}
+
+@keyframes swing {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(8deg);
+    }
+
+    40% {
+        transform: rotate(-7deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .lamp-switch:hover {
@@ -150,16 +204,17 @@ h1 {
    LÂMPADA ACESA
 ========================= */
 
-body.light .lamp-shade {
-
-    background: #fff4b0;
+body.light .pull {
+    background: radial-gradient(
+        circle at 30% 30%,
+        #fff7bf,
+        #f0c84e
+    );
 
     box-shadow:
-        0 0 20px #fff4b0,
-        0 0 50px rgba(255, 220, 100, 0.8),
-        0 0 100px rgba(255, 200, 50, 0.5);
+        0 0 10px rgba(255,255,255,0.5),
+        0 0 20px rgba(255,220,120,0.6);
 }
-
 body.light .lamp-neck,
 body.light .lamp-base {
 
@@ -168,10 +223,9 @@ body.light .lamp-base {
 
 body.light .lamp-switch {
 
-    background: #fff;
+    background: transparent;
 
-    box-shadow:
-        0 0 10px rgba(255,255,255,0.8);
+    box-shadow: none;
 }
 
 
