@@ -32,15 +32,15 @@ O projeto também contém um backend desenvolvido com Node.js e Express, com rot
 
 ### 🌑 Lâmpada apagada
 
-![Login Lamp com a lâmpada apagada](frontend/assets/images/apagada.png)
+![Login Lamp com a lâmpada apagada](frontend/images/apagada.png)
 
 ### 💡 Lâmpada acesa
 
-![Login Lamp com a lâmpada acesa](frontend/assets/images/acessa.png)
+![Login Lamp com a lâmpada acesa](frontend/images/acessa.png)
 
 ### 🎬 Demonstração animada
 
-![GIF de demonstração do Login Lamp](frontend/assets/images/login-demo.gif)
+![GIF de demonstração do Login Lamp](frontend/images/login-demo.gif)
 
 ## 🎯 Objetivos
 
